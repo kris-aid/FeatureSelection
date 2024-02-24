@@ -29,7 +29,7 @@ def min_max_norm(df):
     escaled_df = pd.DataFrame(df_normalized, columns=df.columns)
     return escaled_df
 # Example usage:
-file_path = "features completas.xlsx"
+file_path = "dataset/features completas.xlsx"
 dataframe_from_excel = excel_to_dataframe(file_path)
 if dataframe_from_excel is not None:
     print(dataframe_from_excel.head())  # Display the first few rows of the DataFrame
@@ -37,5 +37,10 @@ print(dataframe_from_excel.iloc[235])
 processed_df=process_dataset(dataframe_from_excel)
 print(processed_df.iloc[235])
 print(processed_df)
+min_max_outliers_df=min_max_norm(processed_df)
+min_max_outliers_df.to_csv('dataset/features_minmax_procesadas.csv', index=False)
 filtered_df=delete_outlayers(processed_df)
-print(min_max_norm(filtered_df))
+
+min_max_df=min_max_norm(filtered_df)
+print(min_max_df)
+min_max_df.to_csv('dataset/features_minmax_procesadas_not_outliers.csv', index=False)
