@@ -5,9 +5,17 @@ import pandas as pd
 
 # Load dataset
 dataset = pd.read_csv("dataset/features_minmax_procesadas.csv")
+etiqueta_column_number = dataset.columns.get_loc('Etiqueta')
 
 def objective_function(subset, dataset):
-    # Calculate ReliefF score for the given subset of features
+    # Find the column number corresponding to the column name 'Etiqueta'
+    etiqueta_column_number = dataset.columns.get_loc('Etiqueta')
+    
+    # Check if etiqueta_column_number is in the subset
+    if etiqueta_column_number not in subset:
+        # Add etiqueta_column_number to the subset
+        subset = np.append(subset, etiqueta_column_number)
+    
     subset_features = dataset.iloc[:, subset]
     score = average_feature_importance(subset_features)
     return score
