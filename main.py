@@ -35,7 +35,13 @@ def initialize_population(num_bats, num_features):
     # Initialize population with random feature subsets
     population = []
     for _ in range(num_bats):
-        subset = np.random.choice(num_features, size=np.random.randint(1, num_features+1), replace=False)
+        # Randomly select 9 other features
+        subset = np.random.choice(num_features, size=9, replace=False)
+        # Ensure etiqueta_column_number is included
+        if etiqueta_column_number not in subset:
+            # Randomly replace one of the features with etiqueta_column_number
+            replace_index = np.random.randint(0, 9)
+            subset[replace_index] = etiqueta_column_number
         population.append(subset)
     print("Initial Population:", population)
     return population
@@ -45,7 +51,7 @@ def update_bat_position(current_position, best_position, alpha, gamma):
     new_position = current_position + alpha * (best_position - current_position) + gamma * np.random.uniform(-1, 1, len(current_position))
     return new_position.astype(int)
 
-def bat_algorithm(dataset, num_iterations=100, num_bats=2, alpha=0.5, gamma=0.5):
+def bat_algorithm(dataset, num_iterations=2, num_bats=10, alpha=0.5, gamma=0.5):
     num_features = len(dataset.columns) - 1  # Exclude the target column ('Etiqueta')
     population = initialize_population(num_bats, num_features)
     best_bat = None
