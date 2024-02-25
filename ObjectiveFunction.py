@@ -32,9 +32,9 @@ dataset = pd.read_csv("dataset/features_minmax_procesadas.csv")
 # print("Average Feature Importance:", average_importance)
 
 
-def average_feature_importance_subset(dataset, n_neighbors, label='Etiqueta', train_test=False):
+def average_feature_importance_subset(dataset, subset_size, n_neighbors, label='Etiqueta', train_test=False):
     # Randomly select 9 columns (to keep 10 including 'Etiqueta') from the dataset
-    subset_columns = random.sample(list(dataset.drop(columns=[label], axis=1).columns), 9)
+    subset_columns = random.sample(list(dataset.drop(columns=[label], axis=1).columns), subset_size-1)
     subset_columns.append(label)  # Include the 'Etiqueta' column
     subset_dataset = dataset[subset_columns]
     print("Random Subset Columns:")
@@ -45,5 +45,5 @@ def average_feature_importance_subset(dataset, n_neighbors, label='Etiqueta', tr
     return average_importance
 
 # Usage example
-average_importance_subset = average_feature_importance_subset(dataset, 100)
+average_importance_subset = average_feature_importance_subset(dataset, 5, 10)
 print("Average Feature Importance (Subset):", average_importance_subset)
