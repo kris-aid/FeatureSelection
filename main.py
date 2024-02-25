@@ -13,6 +13,7 @@ def objective_function(subset, dataset):
     return score
 
 def average_feature_importance(dataset, n_neighbors=50):
+    print("Calculating feature importances for dataset...", dataset.columns)
     # Assuming the label column is named 'Etiqueta'
     X = dataset.drop(columns=['Etiqueta'], axis=1).values
     y = dataset['Etiqueta'].values
