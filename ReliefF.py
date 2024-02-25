@@ -15,12 +15,14 @@ def top_N_columns_names(dataset, N_columns,n_neighbors,label='Etiqueta',train_te
         fs.fit(X_train, y_train)
     else:
         fs.fit(X, y)
-    return dataset.columns[np.argsort(fs.feature_importances_)[::-1][:N_columns]]
+    features_evaluation=zip(dataset.drop('Etiqueta', axis=1).columns,fs.feature_importances_)
+    features_evaluation=sorted(features_evaluation, key=lambda x: x[1], reverse=True)
+    #print(fs.top_features_)
+    return features_evaluation[:N_columns]
 
 
 # Load your dataset
 dataset = pd.read_csv("dataset/features_minmax_procesadas.csv")
-
 columns=top_N_columns_names(dataset,5,100)
 print(columns)
 
