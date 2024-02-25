@@ -1,0 +1,10 @@
+minimum
+WAV D4 FFT frec media
+Valor FFT umbral 10Hz - 20 Hz   
+WAV D3 (RMS) root-mean-square 
+ang_seg_mom
+FFT DENSIDAD DE N?MERO DE PICOS SOBRE RMS
+FREC MAX WAV D5
+WAV D2 FFT VMAX
+maximum
+percentage of energy A6

@@ -1,0 +1,10 @@
+percentage of energy D3
+x_center_mass
+Peak2peak tiempo
+median
+FREC MAX WAV D5
+TIEMPO DENSIDAD DE NUMERO DE PICOS SOBRE RMS
+WAV D2 (RMS) root-mean-square 
+FFT 3ER PICO MAS ALTO
+FREC MAX WAV D6
+Valor FFT umbral 10Hz - 20 Hz   

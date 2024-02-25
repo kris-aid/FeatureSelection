@@ -1,0 +1,10 @@
+FFT DENSIDAD DE N?MERO DE PICOS SOBRE RMS
+x_centroid
+Entropia tiempo
+Tiempo en alcanzar el pico maximo en frecuencia
+WAV MEDIA DE LA ENERGIA
+FFT 3ER PICO MAS ALTO
+MSE frecuencia
+maximum
+WAV D3 the difference between the maximum and minimum values
+MSE tiempo

@@ -1,0 +1,10 @@
+RMS tiempo
+std_dev
+median
+x_centroid
+FREC MAX WAV D5
+TIEMPO DENSIDAD DE NUMERO DE PICOS SOBRE RMS
+WAV D3 FFT frec media
+FFT ENERGIA
+FREC MAX WAV D6
+WAV D2 FFT frec media

@@ -1,0 +1,10 @@
+WAV D3 the difference between the maximum and minimum values
+FFT peak2rms
+WAV D5 FFT VMAX
+WAV D2 (RMS) root-mean-square 
+Varianza frecuencia
+WAV D2 FFT frec media
+percentage of energy D3
+FREC MAX WAV D5
+Entropia tiempo
+WAV D1 the ratio of the largest absolute value to the root-mean-square (RMS).
