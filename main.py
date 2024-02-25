@@ -20,6 +20,7 @@ def average_feature_importance(dataset, n_neighbors=50):
     fs = ReliefF(n_neighbors=n_neighbors)
     fs.fit(X, y)
     average_importance = np.mean(fs.feature_importances_)
+    print("Average Feature Importance:", average_importance)
     return average_importance
 
 def initialize_population(num_bats, num_features):
