@@ -8,6 +8,8 @@ import os
 dataset = pd.read_csv("dataset/features_minmax_procesadas.csv")
 etiqueta_column_number = dataset.columns.get_loc('Etiqueta')
 
+#takes a subset of features and the dataset, calculates the average feature 
+#importance using the ReliefF algorithm, and returns the score.
 def objective_function(subset, dataset):    
     # Check if etiqueta_column_number is in the subset
     if etiqueta_column_number not in subset:
@@ -18,6 +20,7 @@ def objective_function(subset, dataset):
     score = average_feature_importance(subset_features)
     return score
 
+# Relieff algorithm
 def average_feature_importance(dataset, n_neighbors=50):
     # print("Calculating feature importances for dataset...", dataset.columns)
     # Assuming the label column is named 'Etiqueta'
@@ -29,6 +32,7 @@ def average_feature_importance(dataset, n_neighbors=50):
     # print("Average Feature Importance:", average_importance)
     return average_importance
 
+#initializes the population with random feature subsets.
 def initialize_population(num_bats, num_features, subset_size=10):
     # Initialize population with random feature subsets
     population = []
@@ -38,13 +42,24 @@ def initialize_population(num_bats, num_features, subset_size=10):
         subset = np.random.choice(available_features, size=subset_size, replace=False)
         population.append(subset)
     # print("Initial Population:", population)
+    # Each bat is represented as a list of feature indices ex: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9] where each index represents a feature.
     return population
 
+# updates the bat's position using echolocation.
+#Exploration:
+#The bat's position is updated in such a way that it moves towards the best position found so far 
+#(best_position) with a certain step size controlled by alpha.
+#Additionally, randomness is introduced to the movement through the gamma parameter,
+# allowing for exploration of the search space beyond just moving towards the best solution found.
 def update_bat_position(current_position, best_position, alpha, gamma):
-    # Update bat position using echolocation
+    #alpha controls the amplitude of the bat's movement towards the best position.
+    #gamma introduces randomness to the bat's movement.
     new_position = current_position + alpha * (best_position - current_position) + gamma * np.random.uniform(-1, 1, len(current_position))
     return new_position.astype(int)
 
+#  main function implementing the Bat Algorithm. It initializes a population, 
+# iterates over a specified number of iterations, updates bat positions, and selects 
+# the best bat (feature subset) based on the objective function.
 def bat_algorithm(dataset, num_iterations=2, num_bats=10, subset_size=10, alpha=0.5, gamma=0.5):
     print("Running Bat Algorithm...")
     num_features = len(dataset.columns) - 1  # Exclude the target column ('Etiqueta')
