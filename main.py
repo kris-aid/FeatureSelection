@@ -60,7 +60,7 @@ def update_bat_position(current_position, best_position, alpha, gamma):
 #  main function implementing the Bat Algorithm. It initializes a population, 
 # iterates over a specified number of iterations, updates bat positions, and selects 
 # the best bat (feature subset) based on the objective function.
-def bat_algorithm(dataset, num_iterations=2, num_bats=10, subset_size=10, alpha=0.5, gamma=0.5):
+def bat_algorithm(dataset, num_iterations=2, num_bats=10, subset_size=70, alpha=0.5, gamma=0.5):
     print("Running Bat Algorithm...")
     num_features = len(dataset.columns) - 1  # Exclude the target column ('Etiqueta')
     population = initialize_population(num_bats, num_features, subset_size)
@@ -83,9 +83,9 @@ def bat_algorithm(dataset, num_iterations=2, num_bats=10, subset_size=10, alpha=
 
 
 #Ussage
-iterations = 10 # use 2 for less time
-bat_number = 15 # use 5 for less time
-subset_size = 10  # use 5 for less time
+iterations = 5 
+bat_number = 10 
+subset_size = 70 
 best_subsets = []
 for _ in range(5):
     best_subset, best_fitness = bat_algorithm(dataset, iterations, bat_number,subset_size)
@@ -99,6 +99,21 @@ print("")
 print("Top 5 subsets of features:")
 for i, (subset, fitness) in enumerate(best_subsets, start=1):
     print(f"Subset {i}: {subset} - ReliefF Score: {fitness}")
+
+column_names = dataset.columns.tolist()
+
+# Open the file in write mode
+with open('scores.txt', 'w') as f:
+    f.write("Top 5 subsets of features:\n")
+    # Loop through the best_subsets and write each subset and its score to the file
+    for i, (subset, fitness) in enumerate(best_subsets, start=1):
+        # Convert subset elements to strings before joining
+        subset_str = ', '.join(map(str, subset))
+        line = f"Subset {i}: {subset_str} - ReliefF Score: {fitness}\n"
+        f.write(line)
+
+# Confirmation message
+print("Output has been saved to 'scores.txt'")
 
 # Get column names
 column_names = dataset.columns.tolist()
