@@ -1,3 +1,5 @@
+import pandas as pd
+import tensorflow as tf
 import tensorflow.keras as keras
 from tensorflow.keras import layers
 from sklearn.model_selection import train_test_split
@@ -7,6 +9,7 @@ from keras.utils import to_categorical
 import numpy as np
 from sklearn.metrics import roc_auc_score
 from tensorflow.keras.models import load_model
+import os
 
 def set_model(num_feat):
     #define neural network
@@ -74,12 +77,47 @@ def AUC_score_model(model,df):
     auc_score = roc_auc_score(y_test_single, y_pred_classes)
     return auc_score
 
-num_features = df.shape[1]
-model=set_model(num_features)
-train_model(df,model).save("models/model.keras")
+def read_column_names_from_file(file_path):
+
+    with open(file_path, 'r') as file:
+        lines = file.readlines()
+
+    # Strip whitespace and split each line into individual words
+    column_names = [word.strip() for line in lines for word in line.split()]
+
+    # Remove duplicates while preserving order
+    column_names = list(dict.fromkeys(column_names))
+
+    return column_names
+def select_columns(column_names, df):
+    # Check if all specified columns are present in the DataFrame
+    missing_columns = set(column_names) - set(df.columns)
+    if missing_columns:
+        raise ValueError(f"Columns {missing_columns} not found in DataFrame.")
+    
+    return df[column_names].copy()
+
+file_path = 'dataset/features_minmax_procesadas.csv'
+
+df = pd.read_csv(file_path)
+
+set_path = 'topSets'
+
+for file_name in os.listdir(set_path):
+    if os.path.isfile(os.path.join(set_path, file_name)):
+        new_df=select_columns(read_column_names_from_file(set_path+'/'+file_name),df)
+        new_df.to_csv("models/"+file_name+'_df.csv', index=False)
+        num_features = new_df.shape[1]
+        model=set_model(num_features)
+        train_model(new_df,model).save("models/model"+file_name+".keras")
 
 
-folder_path = "path/to/your/folder/"
-model_path = folder_path + "model.keras.h5"
-saved_model = load_model(model_path)
-print(AUC_score_model(saved_model,df))
+
+
+folder_path = "models"
+for file_name in os.listdir(folder_path):
+    if os.path.isfile(os.path.join(folder_path, file_name)):
+        saved_model = load_model(file_name)
+        saved_df_path= os.path.splitext(file_path)[0]+"_df.csv"
+        saved_df = pd.read_csv(saved_df_path)
+        print(AUC_score_model(folder_path+'/'+saved_model,saved_df))

@@ -1,10 +1,70 @@
-minimum
-WAV D4 FFT frec media
-Valor FFT umbral 10Hz - 20 Hz   
-WAV D3 (RMS) root-mean-square 
-ang_seg_mom
-FFT DENSIDAD DE N?MERO DE PICOS SOBRE RMS
-FREC MAX WAV D5
+WAV D1 FFT VMAX
+WAV A6 FFT VMAX
+WAV D3 FFT VMAX
+median
 WAV D2 FFT VMAX
-maximum
-percentage of energy A6
+WAV D3 FFT frec media
+WAV D3 FFT frec media
+FFT 3ER PICO MAS ALTO
+WAV D4 the ratio of the largest absolute value to the root-mean-square (RMS).
+FFT umbral 20Hz - 30 Hz   
+WAV D2 FFT VMAX
+WAV D3 (RMS) root-mean-square 
+FFT rms
+Peak2peak tiempo
+WAV D4 FFT frec media
+WAV D5 FFT frec media
+WAV MEDIA DE LA ENERGIA
+WAV D1 FFT frec media
+FFT rms
+Entropia frecuencia
+Tiempo en alcanzar el pico maximo en frecuencia
+FFT DENSIDAD DE N?MERO DE PICOS SOBRE RMS
+FFT ENERGIA
+FREC MAX WAV A6
+WAV D6 FFT VMAX
+WAV D1 the difference between the maximum and minimum values
+WAV A6 FFT frec media
+WAV D4 the difference between the maximum and minimum values
+WAV D3 FFT VMAX
+WAV D2 (RMS) root-mean-square 
+WAV D1 the ratio of the largest absolute value to the root-mean-square (RMS).
+Max. Frecuencia
+circularity
+WAV D1 (RMS) root-mean-square 
+WAV D3 the difference between the maximum and minimum values
+FREC MAX WAV D3
+FREC MAX WAV A6
+WAV D1 the ratio of the largest absolute value to the root-mean-square (RMS).
+WAV D2 FFT VMAX
+WAV D5 the difference between the maximum and minimum values
+WAV D1 FFT frec media
+percentage of energy D3.1
+WAV D2 (RMS) root-mean-square 
+percentage of energy D3.1
+WAV D6 the ratio of the largest absolute value to the root-mean-square (RMS).
+WAV D1 FFT VMAX
+WAV A6 (RMS) root-mean-square 
+WAV D6 FFT frec media
+percentage of energy D5
+WAV D3 the ratio of the largest absolute value to the root-mean-square (RMS).
+Max. Frecuencia
+FREC MAX WAV D3
+FREC MAX WAV D4
+WAV D6 the ratio of the largest absolute value to the root-mean-square (RMS).
+perimeter
+WAV D1 FFT VMAX
+WAV A6 the difference between the maximum and minimum values
+percentage of energy D6
+FREC MAX WAV D2
+WAV D2 the difference between the maximum and minimum values
+Desviacion estandar frecuencia
+elongation
+percentage of energy D6
+percentage of energy D5
+WAV D4 FFT frec media
+WAV D2 FFT frec media
+area
+percentage of energy D6
+WAV MEDIA DE LA ENERGIA
+FFT ENERGIA
