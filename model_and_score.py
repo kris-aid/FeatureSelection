@@ -130,14 +130,30 @@ def select_columns_by_position(column_numbers, df):
     column_numbers.append(etiqueta_index)
     return df.iloc[:, column_numbers].copy()
 
-for subset_number, column_numbers in columnes.items():
-    os.makedirs("models", exist_ok=True)
-    new_df = select_columns_by_position(column_numbers, df)
-    new_df.to_csv(f"models/subset_{subset_number}_df.csv", index=False)
-    num_features = new_df.shape[1]
-    print(num_features)
-    model = set_model(num_features-1)
-    train_model(new_df, model).save(f"models/model_subset_{subset_number}.keras")
+# for subset_number, column_numbers in columnes.items():
+#     os.makedirs("models", exist_ok=True)
+#     new_df = select_columns_by_position(column_numbers, df)
+#     new_df.to_csv(f"models/subset_{subset_number}_df.csv", index=False)
+#     num_features = new_df.shape[1]
+#     print(num_features)
+#     model = set_model(num_features-1)
+#     train_model(new_df, model).save(f"models/model_subset_{subset_number}.keras")
+
+# folder_path = "models"
+# for file_name in os.listdir(folder_path):
+#     if file_name.endswith(".keras"):
+#         saved_model_path = os.path.join(folder_path, file_name)
+#         print(saved_model_path)
+#         saved_model = load_model(saved_model_path)
+#         #retrieve the "subset"+number from the file name
+#         subset_name = "subset_"+os.path.splitext(file_name)[0].split("_")[2]
+#         print(subset_name)
+#         saved_df_path =subset_name + "_df.csv"
+#         saved_df_path = os.path.join(folder_path, saved_df_path)
+#         saved_df = pd.read_csv(saved_df_path)
+#         print(AUC_score_model(saved_model, saved_df))
+import matplotlib.pyplot as plt
+from sklearn.metrics import roc_curve, auc
 
 folder_path = "models"
 for file_name in os.listdir(folder_path):
@@ -151,4 +167,20 @@ for file_name in os.listdir(folder_path):
         saved_df_path =subset_name + "_df.csv"
         saved_df_path = os.path.join(folder_path, saved_df_path)
         saved_df = pd.read_csv(saved_df_path)
+        # predict probabilities for the positive class
+        y_pred = saved_model.predict(saved_df.drop(columns=['Etiqueta']))[:, 1]
+        # calculate the true positive rate (TPR) and false positive rate (FPR)
+        fpr, tpr, thresholds = roc_curve(saved_df['Etiqueta'], y_pred)
+        # calculate the area under the curve (AUC)
+        roc_auc = auc(fpr, tpr)
+        # plot the ROC curve
+        plt.plot(fpr, tpr, label='ROC curve (AUC = %0.2f)' % roc_auc)
+        plt.plot([0, 1], [0, 1], 'k--')
+        plt.xlim([0.0, 1.0])
+        plt.ylim([0.0, 1.05])
+        plt.xlabel('False Positive Rate')
+        plt.ylabel('True Positive Rate')
+        plt.title('Receiver Operating Characteristic (ROC) Curve')
+        plt.legend(loc="lower right")
+        plt.show()
         print(AUC_score_model(saved_model, saved_df))
