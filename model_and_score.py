@@ -117,7 +117,7 @@ def extract_column_numbers(subset_text):
     for i, subset in enumerate(subsets, 1):
         result[i] = [int(x.strip()) for x in subset.split(',')]
     return result
-# columnes= read_column_numbers("scores.txt")
+columnes= read_column_numbers("scores.txt")
 # print(columnes)
 
 def select_columns_by_position(column_numbers, df):
@@ -130,27 +130,14 @@ def select_columns_by_position(column_numbers, df):
     column_numbers.append(etiqueta_index)
     return df.iloc[:, column_numbers].copy()
 
-# for subset_number, column_numbers in columnes.items():
-#     os.makedirs("models", exist_ok=True)
-#     new_df = select_columns_by_position(column_numbers, df)
-#     new_df.to_csv(f"models/subset_{subset_number}_df.csv", index=False)
-#     num_features = new_df.shape[1]
-#     print(num_features)
-#     model = set_model(num_features-1)
-#     train_model(new_df, model).save(f"models/model_subset_{subset_number}.keras")
-
-
-
-# for file_name in os.listdir(set_path):
-#     if os.path.isfile(os.path.join(set_path, file_name)):
-#         new_df=select_columns(read_column_names_from_file(set_path+'/'+file_name),df)
-#         new_df.to_csv("models/"+file_name+'_df.csv', index=False)
-#         num_features = new_df.shape[1]
-#         model=set_model(num_features)
-#         train_model(new_df,model).save("models/model"+file_name+".keras")
-
-
-
+for subset_number, column_numbers in columnes.items():
+    os.makedirs("models", exist_ok=True)
+    new_df = select_columns_by_position(column_numbers, df)
+    new_df.to_csv(f"models/subset_{subset_number}_df.csv", index=False)
+    num_features = new_df.shape[1]
+    print(num_features)
+    model = set_model(num_features-1)
+    train_model(new_df, model).save(f"models/model_subset_{subset_number}.keras")
 
 folder_path = "models"
 for file_name in os.listdir(folder_path):
