@@ -17,6 +17,11 @@ def process_dataset(df):
     processed_df['Etiqueta'] = processed_df['Etiqueta'].replace(word_mapping)
     processed_df = min_max_norm(processed_df)
     return processed_df
+
+def delete_columns(df, columns_to_delete):
+    df = df.drop(columns=columns_to_delete, axis=1)
+    return df
+
 def delete_outlayers(df):
     z_scores = stats.zscore(df)
     threshold = 4
@@ -28,6 +33,7 @@ def min_max_norm(df):
     df_normalized = scaler.fit_transform(df)
     escaled_df = pd.DataFrame(df_normalized, columns=df.columns)
     return escaled_df
+
 # Example usage:
 file_path = "dataset/features completas.xlsx"
 dataframe_from_excel = excel_to_dataframe(file_path)
@@ -35,12 +41,17 @@ if dataframe_from_excel is not None:
     print(dataframe_from_excel.head())  # Display the first few rows of the DataFrame
 print(dataframe_from_excel.iloc[235])
 processed_df=process_dataset(dataframe_from_excel)
+cleaned_df = delete_columns(processed_df, ['espectrograma etiqueta','minimum','median','mode','form','elongation','circularity','Entropia frecuencia','x_centroid_cm_diff','y_centroid_cm_diff','solidity'])
+min_max_cleaned_df=min_max_norm(cleaned_df)
+min_max_cleaned_df.to_csv('dataset/features_cleaned_minmax.csv', index=False)
+
 print(processed_df.iloc[235])
 print(processed_df)
 min_max_outliers_df=min_max_norm(processed_df)
 min_max_outliers_df.to_csv('dataset/features_minmax_procesadas.csv', index=False)
-filtered_df=delete_outlayers(processed_df)
 
+
+filtered_df=delete_outlayers(processed_df)
 min_max_df=min_max_norm(filtered_df)
 print(min_max_df)
 min_max_df.to_csv('dataset/features_minmax_procesadas_not_outliers.csv', index=False)
