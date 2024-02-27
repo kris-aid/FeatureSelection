@@ -60,7 +60,7 @@ def update_bat_position(current_position, best_position, alpha, gamma):
 #  main function implementing the Bat Algorithm. It initializes a population, 
 # iterates over a specified number of iterations, updates bat positions, and selects 
 # the best bat (feature subset) based on the objective function.
-def bat_algorithm(dataset, num_iterations=2, num_bats=10, subset_size=70, alpha=0.5, gamma=0.5):
+def bat_algorithm(dataset, num_iterations=2, num_bats=10, subset_size=15, alpha=0.5, gamma=0.5):
     print("Running Bat Algorithm...")
     num_features = len(dataset.columns) - 1  # Exclude the target column ('Etiqueta')
     population = initialize_population(num_bats, num_features, subset_size)
@@ -85,7 +85,7 @@ def bat_algorithm(dataset, num_iterations=2, num_bats=10, subset_size=70, alpha=
 #Ussage
 iterations = 5 
 bat_number = 10 
-subset_size = 70 
+subset_size = 15 
 best_subsets = []
 for _ in range(5):
     best_subset, best_fitness = bat_algorithm(dataset, iterations, bat_number,subset_size)
