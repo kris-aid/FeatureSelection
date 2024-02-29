@@ -130,14 +130,14 @@ def select_columns_by_position(column_numbers, df):
     column_numbers.append(etiqueta_index)
     return df.iloc[:, column_numbers].copy()
 
-# for subset_number, column_numbers in columnes.items():
-#     os.makedirs("models", exist_ok=True)
-#     new_df = select_columns_by_position(column_numbers, df)
-#     new_df.to_csv(f"models/subset_{subset_number}_df.csv", index=False)
-#     num_features = new_df.shape[1]
-#     print(num_features)
-#     model = set_model(num_features-1)
-#     train_model(new_df, model).save(f"models/model_subset_{subset_number}.keras")
+for subset_number, column_numbers in columnes.items():
+    os.makedirs("models", exist_ok=True)
+    new_df = select_columns_by_position(column_numbers, df)
+    new_df.to_csv(f"models/subset_{subset_number}_df.csv", index=False)
+    num_features = new_df.shape[1]
+    print(num_features)
+    model = set_model(num_features-1)
+    train_model(new_df, model).save(f"models/model_subset_{subset_number}.keras")
 
 # folder_path = "models"
 # for file_name in os.listdir(folder_path):
