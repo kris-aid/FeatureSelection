@@ -1,20 +1,30 @@
-WAV D2 the ratio of the largest absolute value to the root-mean-square (RMS).
-kurtosis tiempo
-x_center_mass
-MSE tiempo
-Energía de las componentes de la senal
-72 WAV D4 (RMS) root-mean-square 
-FFT DENSIDAD DE N?MERO DE PICOS SOBRE RMS
-percentage of energy D1
-Tiempo en alcanzar el pico maximo en frecuencia
-WAV A6 the difference between the maximum and minimum values
-Peak2peak tiempo
-percentage of energy A6
-Valor FFT umbral 10Hz - 20 Hz   
-WAV D6 the ratio of the largest absolute value to the root-mean-square (RMS).
-percentage of energy D3
+WAV A6 FFT frec media
 solidity
-RMS tiempo
-WAV D4 FFT frec media
-Media frecuencia
-TIEMPO CRUCES POR CERO
+x_center_mass
+WAV D6 (RMS) root-mean-square 
+Kurtosis frecuencia
+WAV D3 (RMS) root-mean-square 
+WAV D3 FFT frec media
+FREC MAX WAV D3
+WAV D2 FFT VMAX
+WAV D3 FFT frec media
+entropy
+WAV D5 FFT VMAX
+median
+WAV D3 FFT VMAX
+percentage of energy D3
+MSE frecuencia
+WAV D4 the ratio of the largest absolute value to the root-mean-square (RMS).
+WAV D3 the ratio of the largest absolute value to the root-mean-square (RMS).
+FFT peak2rms
+WAV D5 (RMS) root-mean-square 
+WAV D6 (RMS) root-mean-square 
+WAV D5 FFT VMAX
+FFT peak2rms
+WAV A6 FFT frec media
+percentage of energy D5
+Desviacion estandar tiempo
+percentage of energy D3.1
+WAV A6 the ratio of the largest absolute value to the root-mean-square (RMS).
+WAV D1 the ratio of the largest absolute value to the root-mean-square (RMS).
+percentage of energy D1

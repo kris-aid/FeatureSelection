@@ -1,20 +1,30 @@
+percentage of energy D6
 WAV A6 (RMS) root-mean-square 
-WAV D4 FFT frec media
-ang_seg_mom
-Varianza tiempo
-WAV D3 FFT frec media
-maximum
-WAV D5 the ratio of the largest absolute value to the root-mean-square (RMS).
-WAV D2 the difference between the maximum and minimum values
-FFT rms
-TIEMPO peak2rms
-percentage of energy D5
 WAV D3 FFT VMAX
-Entropia tiempo
-WAV D5 the difference between the maximum and minimum values
-minimum
-WAV MEDIA DE LA ENERGIA
-WAV D6 the ratio of the largest absolute value to the root-mean-square (RMS).
-WAV D2 (RMS) root-mean-square 
-Max. Frecuencia
 percentage of energy D5
+WAV D5 (RMS) root-mean-square 
+Valor FFT umbral 10Hz - 20 Hz   
+Valor FFT umbral 10Hz - 20 Hz   
+Frecuecia umbral 20-30
+TIEMPO peak2rms
+percentage of energy D1
+WAV D6 (RMS) root-mean-square 
+circularity
+WAV D2 FFT VMAX
+WAV D3 the difference between the maximum and minimum values
+WAV D1 FFT frec media
+WAV D2 the ratio of the largest absolute value to the root-mean-square (RMS).
+WAV A6 (RMS) root-mean-square 
+perimeter
+percentage of energy D5
+WAV D5 the difference between the maximum and minimum values
+Entropia frecuencia
+WAV D4 FFT frec media
+percentage of energy D3
+WAV D3 (RMS) root-mean-square 
+FFT ENERGIA
+WAV D6 FFT frec media
+72 WAV D4 (RMS) root-mean-square 
+WAV D6 the difference between the maximum and minimum values
+WAV D6 FFT VMAX
+correlation

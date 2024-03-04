@@ -1,20 +1,30 @@
-WAV D3 FFT frec media
-FFT umbral 20Hz - 30 Hz   
-MSE frecuencia
-entropy
-y_center_mass
-WAV D4 the difference between the maximum and minimum values
-x_center_mass
+FFT DENSIDAD DE N?MERO DE PICOS SOBRE RMS
 percentage of energy D1
-WAV A6 the ratio of the largest absolute value to the root-mean-square (RMS).
-WAV D6 (RMS) root-mean-square 
-FFT 3ER PICO MAS ALTO
-median
+WAV D3 the difference between the maximum and minimum values
+FREC MAX WAV D2
+FFT rms
+FFT rms
+WAV D5 FFT frec media
+percentage of energy D3.1
+WAV D2 FFT frec media
+WAV A6 (RMS) root-mean-square 
+WAV D2 the difference between the maximum and minimum values
+FREC MAX WAV D4
+percentage of energy D3.1
+percentage of energy A6
+FFT peak2rms
+area
 WAV D2 (RMS) root-mean-square 
-Energía de las componentes de la senal
-Valor FFT umbral 10Hz - 20 Hz   
-WAV D2 the ratio of the largest absolute value to the root-mean-square (RMS).
-FFT ENERGIA
-WAV A6 FFT frec media
-Media frecuencia
-TIEMPO DENSIDAD DE NUMERO DE PICOS SOBRE RMS
+Varianza frecuencia
+Entropia frecuencia
+FREC MAX WAV D6
+WAV D6 FFT frec media
+WAV A6 (RMS) root-mean-square 
+WAV D6 FFT frec media
+correlation
+percentage of energy D3
+FFT DENSIDAD DE N?MERO DE PICOS SOBRE RMS
+FREC MAX WAV D5
+WAV D2 FFT frec media
+WAV D3 FFT frec media
+percentage of energy D3
