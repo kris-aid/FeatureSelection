@@ -13,8 +13,13 @@ def excel_to_dataframe(file_path, sheet_name=0, header_row=0):
 def process_dataset(df):
     df['espectrograma etiqueta'] = range(1, len(df) + 1)
     processed_df = df.dropna()
-    word_mapping = {'Long Period': 1, 'Volcano Tectonic': 0, 'Hybrid':1,'Tremor':0 }
+    #drop the rows that have "Hybrid" and "Tremor" in the "Etiqueta" column
+    processed_df = processed_df[~processed_df['Etiqueta'].str.contains("Hybrid")]
+    processed_df = processed_df[~processed_df['Etiqueta'].str.contains("Tremor")]
+    
+    word_mapping = {'Long Period': 1, 'Volcano Tectonic': 0 }
     processed_df['Etiqueta'] = processed_df['Etiqueta'].replace(word_mapping)
+    
     processed_df = min_max_norm(processed_df)
     return processed_df
 
@@ -43,15 +48,15 @@ print(dataframe_from_excel.iloc[235])
 processed_df=process_dataset(dataframe_from_excel)
 cleaned_df = delete_columns(processed_df, ['espectrograma etiqueta','minimum','median','mode','form','elongation','circularity','Entropia frecuencia','x_centroid_cm_diff','y_centroid_cm_diff','solidity'])
 min_max_cleaned_df=min_max_norm(cleaned_df)
-min_max_cleaned_df.to_csv('dataset/features_cleaned_minmax.csv', index=False)
+# min_max_cleaned_df.to_csv('dataset/features_cleaned_minmax.csv', index=False)
 
 print(processed_df.iloc[235])
 print(processed_df)
 min_max_outliers_df=min_max_norm(processed_df)
-min_max_outliers_df.to_csv('dataset/features_minmax_procesadas.csv', index=False)
+min_max_outliers_df.to_csv('dataset/features_minmax_procesadas_no_t_h.csv', index=False)
 
 
-filtered_df=delete_outlayers(processed_df)
-min_max_df=min_max_norm(filtered_df)
-print(min_max_df)
-min_max_df.to_csv('dataset/features_minmax_procesadas_not_outliers.csv', index=False)
+# filtered_df=delete_outlayers(processed_df)
+# min_max_df=min_max_norm(filtered_df)
+# print(min_max_df)
+# min_max_df.to_csv('dataset/features_minmax_procesadas_not_outliers.csv', index=False)

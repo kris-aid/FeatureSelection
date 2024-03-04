@@ -5,7 +5,7 @@ import pandas as pd
 import os
 
 # Load dataset
-dataset = pd.read_csv("dataset/features_minmax_procesadas.csv")
+dataset = pd.read_csv("dataset/features_minmax_procesadas_no_t_h.csv")
 etiqueta_column_number = dataset.columns.get_loc('Etiqueta')
 
 #takes a subset of features and the dataset, calculates the average feature 
@@ -85,7 +85,7 @@ def bat_algorithm(dataset, num_iterations=2, num_bats=10, subset_size=70, alpha=
 #Ussage
 iterations = 50
 bat_number = 10 
-subset_size = 20 
+subset_size = 30 
 best_subsets = []
 for _ in range(5):
     best_subset, best_fitness = bat_algorithm(dataset, iterations, bat_number,subset_size)
