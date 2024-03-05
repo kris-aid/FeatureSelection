@@ -1,30 +1,55 @@
-FFT DENSIDAD DE N?MERO DE PICOS SOBRE RMS
-percentage of energy D1
-WAV D3 the difference between the maximum and minimum values
-FREC MAX WAV D2
-FFT rms
-FFT rms
-WAV D5 FFT frec media
-percentage of energy D3.1
-WAV D2 FFT frec media
-WAV A6 (RMS) root-mean-square 
-WAV D2 the difference between the maximum and minimum values
-FREC MAX WAV D4
-percentage of energy D3.1
-percentage of energy A6
-FFT peak2rms
-area
-WAV D2 (RMS) root-mean-square 
-Varianza frecuencia
-Entropia frecuencia
-FREC MAX WAV D6
-WAV D6 FFT frec media
-WAV A6 (RMS) root-mean-square 
-WAV D6 FFT frec media
-correlation
-percentage of energy D3
-FFT DENSIDAD DE N?MERO DE PICOS SOBRE RMS
-FREC MAX WAV D5
-WAV D2 FFT frec media
+ang_seg_mom
+MSE tiempo
+Tiempo en alcanzar el pico maximo en frecuencia
 WAV D3 FFT frec media
+72 WAV D4 (RMS) root-mean-square 
+circularity
+WAV D3 (RMS) root-mean-square 
+median
+TIEMPO CRUCES POR CERO
+WAV D3 FFT frec media
+correlation
+mode
+WAV D2 the ratio of the largest absolute value to the root-mean-square (RMS).
+ang_seg_mom
+FFT ENERGIA
+FFT 2DO PICO MAS ALTO
+perimeter
+RMS tiempo
 percentage of energy D3
+WAV D1 the ratio of the largest absolute value to the root-mean-square (RMS).
+WAV D1 the difference between the maximum and minimum values
+MSE tiempo
+FREC MAX WAV D2
+perimeter
+ang_seg_mom
+percentage of energy D1
+WAV D4 the difference between the maximum and minimum values
+std_dev
+Max. Frecuencia
+WAV D4 FFT VMAX
+WAV D6 (RMS) root-mean-square 
+FFT rms
+FREC MAX WAV A6
+WAV A6 the difference between the maximum and minimum values
+FFT 2DO PICO MAS ALTO
+perimeter
+FREC MAX WAV D2
+WAV D3 the difference between the maximum and minimum values
+x_center_mass
+Varianza frecuencia
+WAV D2 FFT VMAX
+FFT peak2rms
+FFT DENSIDAD DE N?MERO DE PICOS SOBRE RMS
+WAV D4 FFT frec media
+MSE tiempo
+Kurtosis frecuencia
+WAV D2 FFT VMAX
+WAV D5 (RMS) root-mean-square 
+Picos
+FFT umbral 20Hz - 30 Hz   
+kurtosis
+y_center_mass
+elongation
+Varianza frecuencia
+FFT rms

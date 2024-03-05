@@ -1,30 +1,55 @@
-percentage of energy D4
-ang_seg_mom
-WAV D3 FFT VMAX
-percentage of energy D4
-WAV D3 the difference between the maximum and minimum values
-Picos
-WAV D4 FFT VMAX
-FREC 3er pico FFT
-median
-Varianza tiempo
-MSE frecuencia
-Frecuecia umbral 20-30
+FFT 3ER PICO MAS ALTO
+WAV D2 the difference between the maximum and minimum values
+FREC MAX WAV D5
+WAV D6 the ratio of the largest absolute value to the root-mean-square (RMS).
+WAV D5 (RMS) root-mean-square 
+WAV D2 FFT frec media
 RMS tiempo
-WAV D6 (RMS) root-mean-square 
-WAV D1 the ratio of the largest absolute value to the root-mean-square (RMS).
-FFT DENSIDAD DE N?MERO DE PICOS SOBRE RMS
+FFT rms
+TIEMPO CRUCES POR CERO
 WAV D2 the ratio of the largest absolute value to the root-mean-square (RMS).
-percentage of energy D3.1
+WAV D2 the ratio of the largest absolute value to the root-mean-square (RMS).
+FFT peak2rms
+WAV A6 the ratio of the largest absolute value to the root-mean-square (RMS).
+WAV D4 the ratio of the largest absolute value to the root-mean-square (RMS).
+WAV D3 (RMS) root-mean-square 
+FFT 3ER PICO MAS ALTO
+WAV D5 (RMS) root-mean-square 
+WAV D2 the difference between the maximum and minimum values
+WAV D2 the ratio of the largest absolute value to the root-mean-square (RMS).
+WAV D3 (RMS) root-mean-square 
+WAV A6 the ratio of the largest absolute value to the root-mean-square (RMS).
+Kurtosis frecuencia
+WAV D4 FFT VMAX
+WAV D3 FFT VMAX
+Max. Frecuencia
+WAV D4 FFT frec media
+TIEMPO peak2rms
+WAV D3 (RMS) root-mean-square 
+Desviacion estandar frecuencia
+WAV D1 FFT frec media
+FFT DENSIDAD DE N?MERO DE PICOS SOBRE RMS
+FFT rms
+WAV D2 FFT frec media
 WAV D2 (RMS) root-mean-square 
-percentage of energy D4
-WAV D2 FFT VMAX
-TIEMPO ENERGIA
-Energia senal
-MSE tiempo
-entropy
-WAV D3 the ratio of the largest absolute value to the root-mean-square (RMS).
-x_center_mass
+WAV D5 the ratio of the largest absolute value to the root-mean-square (RMS).
+mode
+FREC MAX WAV D2
+WAV D5 (RMS) root-mean-square 
+FREC MAX WAV D2
 WAV D4 FFT VMAX
 WAV MEDIA DE LA ENERGIA
-FREC 2do PICO en FFT
+Media frecuencia
+mean
+TIEMPO DENSIDAD DE NUMERO DE PICOS SOBRE RMS
+WAV D2 FFT VMAX
+kurtosis
+FREC MAX WAV A6
+FFT DENSIDAD DE N?MERO DE PICOS SOBRE RMS
+percentage of energy D3.1
+Energia senal
+WAV D3 FFT frec media
+Kurtosis frecuencia
+WAV D2 FFT frec media
+FFT 2DO PICO MAS ALTO
+WAV D6 the ratio of the largest absolute value to the root-mean-square (RMS).

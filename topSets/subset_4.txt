@@ -1,30 +1,55 @@
-WAV A6 FFT frec media
-solidity
-x_center_mass
-WAV D6 (RMS) root-mean-square 
-Kurtosis frecuencia
-WAV D3 (RMS) root-mean-square 
-WAV D3 FFT frec media
-FREC MAX WAV D3
-WAV D2 FFT VMAX
-WAV D3 FFT frec media
-entropy
-WAV D5 FFT VMAX
-median
-WAV D3 FFT VMAX
-percentage of energy D3
-MSE frecuencia
-WAV D4 the ratio of the largest absolute value to the root-mean-square (RMS).
-WAV D3 the ratio of the largest absolute value to the root-mean-square (RMS).
-FFT peak2rms
-WAV D5 (RMS) root-mean-square 
-WAV D6 (RMS) root-mean-square 
-WAV D5 FFT VMAX
-FFT peak2rms
-WAV A6 FFT frec media
-percentage of energy D5
-Desviacion estandar tiempo
 percentage of energy D3.1
-WAV A6 the ratio of the largest absolute value to the root-mean-square (RMS).
+percentage of energy D3
+FFT 2DO PICO MAS ALTO
+WAV D2 the ratio of the largest absolute value to the root-mean-square (RMS).
+WAV D2 the difference between the maximum and minimum values
+WAV D6 the difference between the maximum and minimum values
+Media frecuencia
+kurtosis
+TIEMPO ENERGIA
 WAV D1 the ratio of the largest absolute value to the root-mean-square (RMS).
-percentage of energy D1
+FREC MAX WAV A6
+72 WAV D4 (RMS) root-mean-square 
+Valor FFT umbral 10Hz - 20 Hz   
+WAV D4 the difference between the maximum and minimum values
+WAV D5 the ratio of the largest absolute value to the root-mean-square (RMS).
+FFT umbral 20Hz - 30 Hz   
+FREC MAX WAV D6
+entropy
+ang_seg_mom
+FFT rms
+kurtosis tiempo
+RMS tiempo
+percentage of energy D6
+WAV D3 (RMS) root-mean-square 
+WAV D5 the difference between the maximum and minimum values
+FREC MAX WAV D5
+WAV D6 FFT frec media
+MSE tiempo
+TIEMPO DENSIDAD DE NUMERO DE PICOS SOBRE RMS
+WAV MEDIA DE LA ENERGIA
+percentage of energy D5
+circularity
+WAV D6 (RMS) root-mean-square 
+WAV D3 FFT frec media
+TIEMPO DENSIDAD DE NUMERO DE PICOS SOBRE RMS
+WAV D5 the ratio of the largest absolute value to the root-mean-square (RMS).
+Tiempo en alcanzar el pico maximo en frecuencia
+x_centroid
+FREC 2do PICO en FFT
+mode
+MSE frecuencia
+FFT DENSIDAD DE N?MERO DE PICOS SOBRE RMS
+WAV MEDIA DE LA ENERGIA
+Energia senal
+Energía de las componentes de la senal
+RMS tiempo
+Desviacion estandar tiempo
+WAV D1 the difference between the maximum and minimum values
+mean
+Max. Frecuencia
+WAV D2 the difference between the maximum and minimum values
+x_center_mass
+WAV D1 FFT VMAX
+WAV D4 FFT frec media
+y_centroid
