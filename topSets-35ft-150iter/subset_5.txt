@@ -1,0 +1,35 @@
+FFT ENERGIA
+WAV MEDIA DE LA ENERGIA
+percentage of energy A6
+WAV A6 the difference between the maximum and minimum values
+WAV A6 the ratio of the largest absolute value to the root-mean-square (RMS).
+FFT DENSIDAD DE N?MERO DE PICOS SOBRE RMS
+FREC MAX WAV D6
+FFT 2DO PICO MAS ALTO
+Valor FFT umbral 10Hz - 20 Hz   
+WAV D2 (RMS) root-mean-square 
+WAV D2 (RMS) root-mean-square 
+elongation
+percentage of energy D5
+TIEMPO peak2rms
+WAV D1 FFT frec media
+FREC MAX WAV D2
+median
+WAV D2 the difference between the maximum and minimum values
+percentage of energy D6
+percentage of energy D3
+WAV D3 (RMS) root-mean-square 
+percentage of energy D3.1
+FREC MAX WAV D5
+WAV A6 FFT VMAX
+WAV A6 (RMS) root-mean-square 
+WAV D6 FFT VMAX
+FREC MAX WAV D6
+WAV D3 FFT frec media
+inv_diff_mom
+WAV D2 FFT frec media
+percentage of energy A6
+WAV D5 the difference between the maximum and minimum values
+FFT peak2rms
+WAV D5 the difference between the maximum and minimum values
+WAV D6 the difference between the maximum and minimum values

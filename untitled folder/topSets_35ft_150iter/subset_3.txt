@@ -1,0 +1,35 @@
+WAV D4 FFT frec media
+WAV D6 the ratio of the largest absolute value to the root-mean-square (RMS).
+WAV D5 FFT VMAX
+FREC MAX WAV D3
+MSE frecuencia
+Entropia tiempo
+Peak2peak tiempo
+FREC 3er pico FFT
+perimeter
+percentage of energy D5
+percentage of energy D4
+WAV D1 the difference between the maximum and minimum values
+Varianza tiempo
+FFT rms
+WAV MEDIA DE LA ENERGIA
+circularity
+FREC 2do PICO en FFT
+FFT rms
+WAV D3 the difference between the maximum and minimum values
+maximum
+percentage of energy A6
+FFT umbral 20Hz - 30 Hz   
+x_centroid
+WAV D2 FFT frec media
+RMS tiempo
+MSE tiempo
+WAV D4 the ratio of the largest absolute value to the root-mean-square (RMS).
+FFT 2DO PICO MAS ALTO
+Max. Frecuencia
+y_centroid
+FFT ENERGIA
+WAV D6 FFT VMAX
+WAV D1 FFT frec media
+correlation
+y_centroid

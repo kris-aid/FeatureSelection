@@ -1,0 +1,35 @@
+FFT umbral 20Hz - 30 Hz   
+WAV D2 FFT frec media
+Desviacion estandar frecuencia
+TIEMPO peak2rms
+MSE frecuencia
+Media frecuencia
+Entropia tiempo
+WAV D6 the ratio of the largest absolute value to the root-mean-square (RMS).
+FFT peak2rms
+FREC MAX WAV D3
+WAV D6 FFT VMAX
+WAV D3 (RMS) root-mean-square 
+WAV D2 (RMS) root-mean-square 
+Media frecuencia
+Energia senal
+WAV D5 the difference between the maximum and minimum values
+FFT umbral 20Hz - 30 Hz   
+skewness
+maximum
+WAV A6 the ratio of the largest absolute value to the root-mean-square (RMS).
+TIEMPO ENERGIA
+FFT 3ER PICO MAS ALTO
+percentage of energy D4
+WAV D4 FFT VMAX
+WAV D2 the difference between the maximum and minimum values
+WAV MEDIA DE LA ENERGIA
+WAV D2 the ratio of the largest absolute value to the root-mean-square (RMS).
+WAV D4 the ratio of the largest absolute value to the root-mean-square (RMS).
+contrast
+ang_seg_mom
+FFT DENSIDAD DE N?MERO DE PICOS SOBRE RMS
+WAV D1 FFT frec media
+WAV D5 (RMS) root-mean-square 
+WAV D3 FFT frec media
+Max. Frecuencia

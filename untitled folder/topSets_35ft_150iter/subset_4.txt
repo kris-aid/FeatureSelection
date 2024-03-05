@@ -1,0 +1,35 @@
+WAV D4 the difference between the maximum and minimum values
+ang_seg_mom
+Media tiempo
+WAV D2 the difference between the maximum and minimum values
+Tiempo en alcanzar el pico maximo en frecuencia
+WAV D5 FFT frec media
+Varianza tiempo
+y_center_mass
+WAV D5 FFT VMAX
+FFT rms
+WAV D3 (RMS) root-mean-square 
+ang_seg_mom
+percentage of energy A6
+WAV D5 (RMS) root-mean-square 
+std_dev
+solidity
+Tiempo en alcanzar el pico maximo en frecuencia
+FREC MAX WAV D5
+Peak2peak tiempo
+FREC MAX WAV D2
+y_center_mass
+TIEMPO CRUCES POR CERO
+Max. Frecuencia
+WAV D6 FFT VMAX
+WAV D2 FFT VMAX
+FFT ENERGIA
+kurtosis
+area
+Desviacion estandar tiempo
+TIEMPO ENERGIA
+kurtosis
+WAV D3 the difference between the maximum and minimum values
+Media frecuencia
+x_center_mass
+WAV D4 FFT frec media

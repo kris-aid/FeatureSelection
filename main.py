@@ -83,9 +83,9 @@ def bat_algorithm(dataset, num_iterations=2, num_bats=10, subset_size=70, alpha=
 
 
 #Ussage
-iterations = 5 
-bat_number = 10 
-subset_size = 70 
+iterations = 150 
+bat_number = 5 
+subset_size = 35 
 best_subsets = []
 for _ in range(5):
     best_subset, best_fitness = bat_algorithm(dataset, iterations, bat_number,subset_size)
