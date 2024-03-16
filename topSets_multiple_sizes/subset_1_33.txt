@@ -1,0 +1,33 @@
+Valor FFT umbral 10Hz - 20 Hz   
+FREC MAX WAV D5
+WAV D1 FFT VMAX
+FFT rms
+WAV D5 (RMS) root-mean-square 
+WAV D2 FFT VMAX
+percentage of energy D1
+WAV A6 (RMS) root-mean-square 
+percentage of energy D5
+WAV D2 the difference between the maximum and minimum values
+WAV D4 FFT frec media
+FREC MAX WAV D2
+WAV D1 FFT frec media
+WAV D2 FFT VMAX
+WAV D4 FFT frec media
+percentage of energy D5
+WAV D4 FFT VMAX
+WAV D4 FFT frec media
+percentage of energy D5
+WAV MEDIA DE LA ENERGIA
+Valor FFT umbral 10Hz - 20 Hz   
+WAV A6 the difference between the maximum and minimum values
+WAV D2 (RMS) root-mean-square 
+x_centroid
+inv_diff_mom
+FFT DENSIDAD DE N?MERO DE PICOS SOBRE RMS
+WAV D3 the difference between the maximum and minimum values
+WAV D2 FFT frec media
+WAV A6 the ratio of the largest absolute value to the root-mean-square (RMS).
+Entropia frecuencia
+ang_seg_mom
+WAV D1 FFT frec media
+FFT peak2rms

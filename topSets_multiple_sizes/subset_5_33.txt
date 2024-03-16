@@ -1,0 +1,33 @@
+WAV D4 FFT frec media
+WAV D5 the difference between the maximum and minimum values
+WAV D4 FFT VMAX
+Peak2peak tiempo
+x_center_mass
+WAV MEDIA DE LA ENERGIA
+elongation
+FFT DENSIDAD DE N?MERO DE PICOS SOBRE RMS
+Energía de las componentes de la senal
+WAV D3 (RMS) root-mean-square 
+WAV D2 (RMS) root-mean-square 
+percentage of energy D5
+correlation
+WAV D3 the difference between the maximum and minimum values
+WAV D3 FFT frec media
+Kurtosis frecuencia
+percentage of energy D6
+WAV D2 FFT frec media
+FREC MAX WAV D5
+Kurtosis frecuencia
+percentage of energy D4
+maximum
+FFT DENSIDAD DE N?MERO DE PICOS SOBRE RMS
+WAV A6 FFT VMAX
+solidity
+FFT peak2rms
+FREC 3er pico FFT
+Valor FFT umbral 10Hz - 20 Hz   
+WAV D5 (RMS) root-mean-square 
+WAV D3 FFT frec media
+WAV D5 FFT VMAX
+RMS tiempo
+WAV D3 (RMS) root-mean-square 

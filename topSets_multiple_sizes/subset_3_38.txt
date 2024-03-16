@@ -1,0 +1,38 @@
+WAV D5 FFT frec media
+median
+WAV D4 FFT frec media
+Valor FFT umbral 10Hz - 20 Hz   
+FREC MAX WAV D4
+FFT rms
+elongation
+WAV D3 the ratio of the largest absolute value to the root-mean-square (RMS).
+WAV D4 the difference between the maximum and minimum values
+FREC MAX WAV D4
+WAV D3 FFT frec media
+WAV D3 FFT frec media
+percentage of energy D5
+WAV A6 (RMS) root-mean-square 
+FREC 3er pico FFT
+FFT ENERGIA
+WAV D5 FFT frec media
+WAV D5 the ratio of the largest absolute value to the root-mean-square (RMS).
+FFT 3ER PICO MAS ALTO
+percentage of energy D4
+WAV D5 the ratio of the largest absolute value to the root-mean-square (RMS).
+WAV D3 FFT frec media
+WAV D4 the ratio of the largest absolute value to the root-mean-square (RMS).
+WAV D5 FFT VMAX
+FREC MAX WAV D6
+WAV D2 FFT VMAX
+contrast
+percentage of energy A6
+FFT 2DO PICO MAS ALTO
+FFT peak2rms
+72 WAV D4 (RMS) root-mean-square 
+WAV D2 (RMS) root-mean-square 
+FFT DENSIDAD DE N?MERO DE PICOS SOBRE RMS
+ang_seg_mom
+WAV D1 FFT frec media
+WAV D2 FFT VMAX
+WAV D3 FFT VMAX
+FREC MAX WAV D6

@@ -1,3 +1,4 @@
+import random
 import numpy as np
 from skrebate import ReliefF
 from sklearn.model_selection import train_test_split
@@ -81,60 +82,54 @@ def bat_algorithm(dataset, num_iterations=2, num_bats=10, subset_size=70, alpha=
         
     return best_bat, best_fitness
 
-
-#Ussage
-iterations = 150 
+# Usage
+iterations = 100
 bat_number = 5 
-subset_size = 35 
 best_subsets = []
+selected_features = []
 for _ in range(5):
-    best_subset, best_fitness = bat_algorithm(dataset, iterations, bat_number,subset_size)
+    # Generate random subset size between 25 and 45
+    subset_size = random.randint(25, 45)
+    selected_features.append(subset_size)
+    print(f"\nRunning Bat Algorithm with subset size: {subset_size}")
+    best_subset, best_fitness = bat_algorithm(dataset, iterations, bat_number, subset_size)
     best_subsets.append((best_subset, best_fitness))
 
 # Sort subsets by fitness
-best_subsets.sort(key=lambda x: x[1], reverse=True)
+# best_subsets.sort(key=lambda x: x[1], reverse=True)
 
-print("")
-print("")
-print("Top 5 subsets of features:")
+# Print and save top subsets
+print("\nTop 5 subsets of features:")
 for i, (subset, fitness) in enumerate(best_subsets, start=1):
     print(f"Subset {i}: {subset} - ReliefF Score: {fitness}")
 
-column_names = dataset.columns.tolist()
-
-# Open the file in write mode
+# Save top subsets to a file
 with open('scores.txt', 'w') as f:
     f.write("Top 5 subsets of features:\n")
-    # Loop through the best_subsets and write each subset and its score to the file
     for i, (subset, fitness) in enumerate(best_subsets, start=1):
-        # Convert subset elements to strings before joining
         subset_str = ', '.join(map(str, subset))
         line = f"Subset {i}: {subset_str} - ReliefF Score: {fitness}\n"
         f.write(line)
 
-# Confirmation message
 print("Output has been saved to 'scores.txt'")
 
 # Get column names
 column_names = dataset.columns.tolist()
 
-print("")
-print("")
-# Modified print with corresponding names
+# Print top subsets with corresponding names
 print("\nTop 5 subsets of features with corresponding names:")
 for i, (subset, fitness) in enumerate(best_subsets, start=1):
     subset_names = [column_names[i] for i in subset]
     print(f"Subset {i}: {subset_names} - ReliefF Score: {fitness}")
 
-# Create the folder if it doesn't exist
-folder_name = "topSets"
+# Create a folder and save subsets in separate files
+folder_name = "topSets_multiple_sizes"
 if not os.path.exists(folder_name):
     os.makedirs(folder_name)
 
-# Output each subset to a text file in the folder
 for i, (subset, _) in enumerate(best_subsets, start=1):
     subset_names = [column_names[i] for i in subset]
-    file_path = os.path.join(folder_name, f"subset_{i}.txt")
+    file_path = os.path.join(folder_name, f"subset_{i}_{selected_features[i-1]}.txt")
     with open(file_path, "w") as file:
         file.write("\n".join(subset_names))
 

@@ -1,0 +1,44 @@
+FREC MAX WAV D4
+FREC MAX WAV D6
+percentage of energy D6
+Kurtosis frecuencia
+WAV D3 FFT frec media
+WAV D5 FFT frec media
+Entropia frecuencia
+y_center_mass
+WAV A6 (RMS) root-mean-square 
+WAV D3 the difference between the maximum and minimum values
+WAV A6 FFT VMAX
+Frequency FFT umbral 10Hz - 20 Hz   
+WAV D2 (RMS) root-mean-square 
+percentage of energy A6
+Media tiempo
+percentage of energy D3
+WAV D4 the difference between the maximum and minimum values
+WAV D2 FFT frec media
+Varianza frecuencia
+FREC MAX WAV D2
+FREC 2do PICO en FFT
+WAV D2 the difference between the maximum and minimum values
+WAV A6 the ratio of the largest absolute value to the root-mean-square (RMS).
+entropy
+x_centroid
+WAV D6 the ratio of the largest absolute value to the root-mean-square (RMS).
+WAV A6 FFT frec media
+WAV D3 FFT VMAX
+area
+Frecuecia umbral 20-30
+FFT ENERGIA
+WAV D6 (RMS) root-mean-square 
+FREC 2do PICO en FFT
+maximum
+WAV D6 the difference between the maximum and minimum values
+FFT umbral 20Hz - 30 Hz   
+percentage of energy D3
+Valor FFT umbral 10Hz - 20 Hz   
+WAV D4 the difference between the maximum and minimum values
+Max. Frecuencia
+FFT rms
+WAV D2 (RMS) root-mean-square 
+x_centroid
+circularity
